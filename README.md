@@ -82,18 +82,10 @@ Every tool is its own repo. Each is a standalone system — `git clone` produces
 |------|--------|------|------|
 | **learning-loop** | Ouroboros | Self-improving agent learning loop | [learning-loop](https://github.com/Perttulands/learning-loop) |
 
-### Utilities
-
-| Tool | What | Repo |
-|------|------|------|
-| **media-gen** | Image + audio generation hub | [polis-media-gen](https://github.com/Perttulands/polis-media-gen) |
-| **polis-utils** | Status, boot checks, secret scanning | [polis-utils](https://github.com/Perttulands/polis-utils) |
-
 ### Related
 
 | What | Repo |
 |------|------|
-| Chrote — sandboxed browser environment (Polis fork) | [my-chrote](https://github.com/Perttulands/my-chrote) |
 | VPS provisioning | [vps-setup](https://github.com/Perttulands/vps-setup) |
 
 ---
