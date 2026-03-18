@@ -46,7 +46,7 @@ go build -o truthsayer ./cmd/truthsayer && sudo mv truthsayer /usr/local/bin/
 
 ### Gate — *Cerberus*
 
-[![Gate Banner](https://raw.githubusercontent.com/Perttulands/cerberus-gate/master/banner.png)](https://github.com/Perttulands/cerberus-gate)
+[![Gate Banner](https://raw.githubusercontent.com/Perttulands/cerberus-gate/main/banner.png)](https://github.com/Perttulands/cerberus-gate)
 
 Three heads. One verdict. Gate is the quality checkpoint that guards entry into production: it runs your tests, linters, and security scanners, records failures as trackable beads, and auto-closes them when you fix the problem. Three gate levels — quick, standard, deep — auto-detect your test frameworks and linters. Integrates Truthsayer and UBS for deep scans. Nothing enters the city without a unanimous verdict from all three heads.
 
