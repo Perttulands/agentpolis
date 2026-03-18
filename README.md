@@ -13,6 +13,20 @@ This is not a framework. It is a working system. Every tool below is a standalon
 
 ---
 
+## The City That Builds Better Citizens
+
+Most agent systems treat agents as fixed. Prompt, deploy, observe, adjust, repeat. No memory across iterations. No controlled comparison. No evidence that changes actually helped.
+
+Intuition wearing a lab coat.
+
+Polis treats *what makes an agent capable* as an empirical question. A research loop runs continuously:
+
+```
+Observe → Hypothesize → Experiment → Evaluate → Deploy → Feed Back
+```
+
+---
+
 ## The Toolstack
 
 Every tool is its own repo. `git clone` produces something that works without Polis. No dependencies on the city. No buy-in required. Inside the walls, they wire together into something greater than the sum.
@@ -36,7 +50,7 @@ go build -o truthsayer ./cmd/truthsayer && sudo mv truthsayer /usr/local/bin/
 
 ### Gate — *Cerberus*
 
-[![Gate Banner](https://raw.githubusercontent.com/Perttulands/cerberus-gate/main/banner.png)](https://github.com/Perttulands/cerberus-gate)
+[![Gate Banner](https://raw.githubusercontent.com/Perttulands/cerberus-gate/master/banner.png)](https://github.com/Perttulands/cerberus-gate)
 
 Three heads. One verdict. Gate is the quality checkpoint that guards entry into production: it runs your tests, linters, and security scanners, records failures as trackable beads, and auto-closes them when you fix the problem. Three gate levels — quick, standard, deep — auto-detect your test frameworks and linters. Integrates Truthsayer and UBS for deep scans. Nothing enters the city without a unanimous verdict from all three heads.
 
@@ -139,7 +153,7 @@ go build -o argus ./cmd/argus && sudo mv argus /usr/local/bin/
 
 ### Beads — *The Memory*
 
-Beads is an event-sourced work tracker where JSONL is the append-only source of truth and SQLite is a disposable derived index that auto-rebuilds on corruption. The Polis fork replaces the entire storage architecture of the upstream tracker: concurrency through POSIX flock on the JSONL file, crash resilience, automatic recovery, and robust concurrent access. Written in Rust. Shrunk from 20,000 to 3,300 lines. Every piece of work that matters in Polis goes through beads.
+beads-polis is our fork of [beads-rust](https://github.com/jdrouet/beads) — rebuilt from the storage layer up. JSONL is the append-only source of truth. SQLite is a disposable derived index that auto-rebuilds on corruption. The upstream tracker had broken concurrent access; the Polis fork replaces the entire storage architecture with POSIX flock on the JSONL file, crash resilience, and automatic recovery. Written in Rust. Shrunk from 20,000 to 3,300 lines. Every piece of work that matters in Polis goes through beads.
 
 ```bash
 git clone https://github.com/Perttulands/beads-polis.git
@@ -236,28 +250,6 @@ cd beads-polis/system && cargo build --release && sudo mv target/release/br "$IN
 
 echo "Done. All tools installed to $INSTALL_DIR"
 ```
-
----
-
-## The City That Builds Better Citizens
-
-Most agent systems treat agents as fixed. Prompt, deploy, observe, adjust, repeat. No memory across iterations. No controlled comparison. No evidence that changes actually helped.
-
-Intuition wearing a lab coat.
-
-Polis treats *what makes an agent capable* as an empirical question. A research loop runs continuously:
-
-```
-Observe → Hypothesize → Experiment → Evaluate → Deploy → Feed Back
-```
-
-Chiron generates candidate agent configurations. The lab runs controlled experiments — sealed workspaces, identical inputs, multiple replicas. The learning loop extracts patterns from production traces and feeds them into future runs.
-
-We discovered that values-based prompting *suppresses* the behaviors it is trying to produce. That more context is not better context — competing signals dilute each other. That the same value delivered as instruction vs. first-person memory vs. abstract framing produces measurably different agent behavior.
-
-Most people building agents are actively making them worse and do not know it.
-
-Read the full research design: [docs/THE-LOOP.md](docs/THE-LOOP.md)
 
 ---
 
