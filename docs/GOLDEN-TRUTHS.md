@@ -104,4 +104,18 @@ The primary reader of any code, comment, name, or document in Polis is an agent 
 
 ---
 
+## IX. Earn the Right to Build
+
+We do not plan to feel ready. We plan to find out whether we should build at all.
+
+Planning is interrogation of the premise. The review asks: is this the right problem? Is the approach right? Is there something more fundamental that should change first? Front-load this work. A plan that survives it has earned the right to be built.
+
+**In practice:**
+- Before building, ask whether the problem is correctly identified — or whether you're solving a symptom of something deeper.
+- Review is not polish. It is the moment to propose that the scope, approach, or premise is wrong.
+- Build confidence is earned during planning. If you don't have it, the plan isn't done.
+
+---
+
 *Perttu, Founder, February 2026*
+*Truth IX added March 2026*
