@@ -15,10 +15,6 @@ This is not a framework. It is a working system. Every tool below is a standalon
 
 ## The City That Builds Better Citizens
 
-Most agent systems treat agents as fixed. Prompt, deploy, observe, adjust, repeat. No memory across iterations. No controlled comparison. No evidence that changes actually helped.
-
-Intuition wearing a lab coat.
-
 Polis treats *what makes an agent capable* as an empirical question. A research loop runs continuously:
 
 ```
