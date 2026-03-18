@@ -164,14 +164,6 @@ git clone https://github.com/Perttulands/learning-loop.git
 
 ---
 
-### Mercury — *The Handoff*
-
-Context windows die. Mercury makes sure the knowledge doesn't. Self-managed context resets for AI agents — when a session is running out of room, Mercury captures the critical state, closes the session cleanly, and wakes up a fresh one with everything it needs to continue. Die with dignity. Wake up fresh.
-
-[**→ mercury-handoff**](https://github.com/Perttulands/mercury-handoff)
-
----
-
 ### UBS — *Ultimate Bug Scanner*
 
 A polyglot bug scanner built for the way AI agents write code. Watches eight languages simultaneously (JS/TS, Python, Go, Java, Rust, C/C++, Ruby, Swift), catches the bugs that LLMs reliably produce — missing await, null dereferences, eval, XSS, resource leaks — and returns structured results in under five seconds with no configuration. 1000+ patterns. JSON, JSONL, SARIF, and HTML output. Baseline comparison for CI regression tracking. The Polis fork integrates it as the default deep scan in the quality gate.
